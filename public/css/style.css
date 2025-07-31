@@ -26,3 +26,18 @@ footer {
     text-align: center;
     padding: 10px;
 }
+
+.modal-content {
+    animation: zoomIn 0.3s ease;
+}
+
+@keyframes zoomIn {
+    from {transform: scale(0.8); opacity: 0}
+    to {transform: scale(1); opacity: 1}
+}
+
+#syaratList {
+    text-align: left;
+    padding-left: 20px;
+    list-style-position: inside;
+}

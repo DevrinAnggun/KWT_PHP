@@ -32,6 +32,7 @@
         color: black;
     }
 
+    /* MODAL */
     .modal {
         display: none;
         position: fixed;
@@ -89,7 +90,7 @@
     @endforeach
 </div>
 
-<!-- MODAL PILIHAN -->
+<!-- MODAL -->
 <div id="layananModal" class="modal">
     <div class="modal-content">
         <h3 id="modalTitle">Layanan</h3>
@@ -100,86 +101,26 @@
     </div>
 </div>
 
-<!-- MODAL SYARAT -->
-<div id="syaratModal" class="modal">
-    <div class="modal-content" style="text-align: left;">
-        <h3 id="syaratTitle" style="text-align: center;">Syarat Dokumen</h3>
-        <ul id="syaratList" style="padding-left: 20px; list-style-type: disc;">
-            <!-- Diisi lewat JS -->
-        </ul>
-        <div style="text-align: center;">
-            <button onclick="closeSyarat()" class="close-btn">Tutup</button>
-        </div>
-    </div>
-</div>
-
 <script>
     const modal = document.getElementById('layananModal');
     const modalTitle = document.getElementById('modalTitle');
     const buatBtn = document.getElementById('buatSuratBtn');
     const syaratBtn = document.getElementById('lihatSyaratBtn');
 
-    const syaratModal = document.getElementById('syaratModal');
-    const syaratTitle = document.getElementById('syaratTitle');
-    const syaratList = document.getElementById('syaratList');
-
-    const syaratData = {
-    "ktp": ["Fotokopi KK", "Formulir Permohonan", "Surat Pengantar RT"],
-    "kk": ["Fotokopi KTP Suami & Istri", "Surat Nikah", "Surat Pengantar RT"],
-    "akta_lahir": ["Fotokopi KK", "Fotokopi KTP Orang Tua", "Surat Keterangan Lahir dari RS"],
-    "akta_kematian": ["Fotokopi KTP Almarhum", "Surat Keterangan Kematian dari RS", "Surat Pengantar RT"],
-    "nikah": ["Fotokopi KTP & KK", "Surat Pernyataan Belum Menikah", "Surat Pengantar RT"],
-    "skck": ["Fotokopi KTP", "Pas Foto 4x6", "Surat Pengantar RT"],
-    "pindah": ["Fotokopi KK & KTP", "Surat Pindah dari Kecamatan", "Surat Pengantar RT"],
-    "usaha": ["Fotokopi KTP", "Surat Pernyataan Usaha", "Surat Pengantar RT"],
-};
-
-
     function openModal(label) {
         modal.style.display = 'block';
         modalTitle.textContent = label;
         const slug = label.toLowerCase().replace(/\s+/g, '_');
         buatBtn.href = `/layanan/${slug}/buat`;
-
-        // Aktifkan tombol lihat syarat
-        syaratBtn.onclick = function(e) {
-            e.preventDefault();
-            openSyarat(label);
-        };
+        syaratBtn.href = `/layanan/${slug}/syarat`;
     }
 
     function closeModal() {
         modal.style.display = 'none';
     }
 
-    function openSyarat(label) {
-    modal.style.display = 'none';
-    syaratModal.style.display = 'block';
-    syaratTitle.textContent = 'Syarat Dokumen: ' + label;
-
-    const key = label.toLowerCase().replace(/\s+/g, '_'); // ⬅️ konsisten
-    syaratList.innerHTML = '';
-    if (syaratData[key]) {
-        syaratData[key].forEach(item => {
-            const li = document.createElement('li');
-            li.textContent = item;
-            syaratList.appendChild(li);
-        });
-    } else {
-        syaratList.innerHTML = '<li>Belum tersedia.</li>';
-    }
-}
-
-
-    function closeSyarat() {
-        syaratModal.style.display = 'none';
-    }
-
-    // Tutup modal kalau klik luar
     window.onclick = function(e) {
         if (e.target == modal) closeModal();
-        if (e.target == syaratModal) closeSyarat();
     }
 </script>
-
 @endsection
