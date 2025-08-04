@@ -26,16 +26,27 @@
     </style>
 </head>
 <body>
-    <header style="background-color: #2e8b57; color: white; padding: 20px; text-align: center;">
-        <h1>Kelurahan Karangtengah</h1>
-        <nav style="margin-top: 10px;">
-            <a href="{{ route('beranda') }}" style="color: white; margin: 0 10px;">Beranda</a>
-            <a href="{{ route('profil') }}" style="color: white; margin: 0 10px;">Profil</a>
-            <a href="{{ route('layanan') }}" style="color: white; margin: 0 10px;">Layanan Surat</a>
-            <a href="{{ route('penduduk') }}" style="color: white; margin: 0 10px;">Data Penduduk</a>
-            <a href="{{ route('kontak') }}" style="color: white; margin: 0 10px;">Kontak</a>
+    <header class="main-header">
+    <div class="header-container">
+        
+        <!-- Kiri: Logo dan Judul digabung dalam satu link -->
+        <a href="{{ route('beranda') }}" class="header-logo-title">
+            <!-- Ganti 'logo.png' dengan nama file logo Anda jika berbeda -->
+            <img src="{{ asset('img/logo.png') }}" alt="Logo Kelurahan" class="header-logo">
+            <h1 class="header-title">Kelurahan Karangtengah</h1>
+        </a>
+
+        <!-- Kanan: Navigasi (tidak berubah banyak) -->
+        <nav class="main-nav">
+            <a href="{{ route('beranda') }}">Beranda</a>
+            <a href="{{ route('profil') }}">Profil</a>
+            <a href="{{ route('layanan') }}">Layanan Surat</a>
+            <a href="{{ route('penduduk') }}">Data Penduduk</a>
+            <a href="{{ route('kontak') }}">Kontak</a>
         </nav>
-    </header>
+
+    </div>
+</header>
 
     <main>
         @yield('content')
