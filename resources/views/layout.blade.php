@@ -1,6 +1,9 @@
 <!DOCTYPE html>
 <html lang="id">
 <head>
+    <!-- Bootstrap 5 CSS & JS -->
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
     <meta charset="UTF-8">
     <title>Kelurahan Karangtengah</title>
     <link rel="stylesheet" href="{{ asset('css/style.css') }}">
@@ -36,14 +39,16 @@
             <h1 class="header-title">Kelurahan Karangtengah</h1>
         </a>
 
-        <!-- Kanan: Navigasi (tidak berubah banyak) -->
-        <nav class="main-nav">
-            <a href="{{ route('beranda') }}">Beranda</a>
-            <a href="{{ route('profil') }}">Profil</a>
-            <a href="{{ route('layanan') }}">Layanan Surat</a>
-            <a href="{{ route('penduduk') }}">Data Penduduk</a>
-            <a href="{{ route('kontak') }}">Kontak</a>
-        </nav>
+        <!-- Kanan: Navigasi -->
+<nav class="main-nav">
+    <a href="{{ route('beranda') }}">Beranda</a>
+    <a href="{{ route('profil') }}">Profil</a>
+    <a href="{{ route('layanan') }}">Layanan Surat</a>
+    <a href="{{ route('penduduk') }}">Data Penduduk</a>
+    <a href="{{ route('kontak') }}">Kontak</a>
+    <a href="{{ route('dokumentasi') }}">Dokumentasi</a> {{-- ✅ Tambahan ini --}}
+</nav>
+
 
     </div>
 </header>

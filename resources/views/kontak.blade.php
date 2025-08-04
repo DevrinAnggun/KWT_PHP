@@ -10,41 +10,41 @@
 <div class="contact-container">
 
     <!-- Kolom Informasi Kontak -->
-    <div class="contact-info-card">
-        <h3 class="card-title">Informasi Kontak</h3>
-        <p class="card-intro">Anda dapat mengunjungi kami langsung atau menghubungi kami melalui telepon dan email pada jam kerja.</p>
-        
-        <ul class="contact-details">
-            <li>
-                <i class="fas fa-map-marker-alt"></i>
-                <div>
-                    <strong>Alamat</strong>
-                    <span>Jl. Raya Karangtengah No. 1<br>Banjarnegara, Jawa Tengah 53412</span>
-                </div>
-            </li>
-            <li>
-                <i class="fas fa-phone-alt"></i>
-                <div>
-                    <strong>Telepon</strong>
-                    <span>(0286) 123456</span>
-                </div>
-            </li>
-            <li>
-                <i class="fas fa-envelope"></i>
-                <div>
-                    <strong>Email</strong>
-                    <span>kelurahan@karangtengah.go.id</span>
-                </div>
-            </li>
-            <li>
-                <i class="fas fa-clock"></i>
-                <div>
-                    <strong>Jam Pelayanan</strong>
-                    <span>Senin - Jumat: 08:00 - 15:00 WIB</span>
-                </div>
-            </li>
-        </ul>
-    </div>
+<div class="contact-info-card">
+    <h3 class="card-title">Informasi Kontak</h3>
+    <p class="card-intro">Anda dapat mengunjungi kami langsung atau menghubungi kami melalui telepon dan email pada jam kerja.</p>
+    
+    <ul class="contact-details">
+        <li>
+            <i class="fas fa-map-marker-alt"></i>
+            <div>
+                <strong>📌 Alamat</strong>
+                <span>Jl. Raya Karangtengah No. 1<br>Banjarnegara, Jawa Tengah 53412</span>
+            </div>
+        </li>
+        <li>
+            <i class="fas fa-phone-alt"></i>
+            <div>
+                <strong>📱 Telepon</strong>
+                <span>(0286) 123456</span>
+            </div>
+        </li>
+        <li>
+            <i class="fas fa-envelope"></i>
+            <div>
+                <strong>📧 Email</strong>
+                <span>kelurahan@karangtengah.go.id</span>
+            </div>
+        </li>
+        <li>
+            <i class="fas fa-clock"></i>
+            <div>
+                <strong>⏰ Jam Pelayanan</strong>
+                <span>Senin - Jumat: 08:00 - 15:00 WIB</span>
+            </div>
+        </li>
+    </ul>
+</div>
 
     <!-- Kolom Formulir Kontak -->
     <div class="contact-form-card">

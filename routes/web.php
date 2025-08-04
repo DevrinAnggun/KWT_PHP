@@ -18,6 +18,10 @@ Route::get('/data-penduduk', function () {
     return view('penduduk');
 })->name('penduduk');
 
+Route::get('/dokumentasi', function () {
+    return view('dokumentasi');
+})->name('dokumentasi');
+
 Route::get('/kontak', function () {
     return view('kontak');
 })->name('kontak');
@@ -43,3 +47,4 @@ Route::get('/layanan/{jenis}/buat', function($jenis) {
 
 use App\Http\Controllers\LayananController;
 Route::get('/layanan/{jenis}/buat', [LayananController::class, 'buatSurat']);
+
