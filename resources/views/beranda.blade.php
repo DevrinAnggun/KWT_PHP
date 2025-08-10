@@ -5,7 +5,9 @@
 {{-- Bagian Selamat Datang & Gambar --}}
 <div class="section-box">
     <h2>Selamat Datang di Website Resmi Kelurahan Karangtengah</h2>
-    <img src="{{ asset('img/kelurahan.jpg') }}" alt="Foto Kelurahan Karangtengah" style="max-width: 100%; height: auto; margin-bottom: 15px; border-radius: 8px;">
+    <img src="{{ asset('img/kelurahan.jpg') }}" 
+     alt="Foto Kelurahan Karangtengah" 
+     style="display: block; margin: 0 auto 15px auto; max-width: 400px; height: auto; border-radius: 8px;">
     <p>Website ini merupakan media informasi dan pelayanan online untuk masyarakat Kelurahan Karangtengah, Kecamatan Banjarnegara. Kami hadir untuk memberikan kemudahan akses terhadap berbagai informasi, pelayanan surat menyurat, data penduduk, dan kontak kelurahan.</p>
 </div>
 
